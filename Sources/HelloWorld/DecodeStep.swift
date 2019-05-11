@@ -23,7 +23,7 @@ struct DecodeStep {
     }
 
     func successful(queue: DispatchQueue? = nil) -> SuccessfulStep {
-        return { next in 
+        return SuccessfulStep { next in 
             return self.make(queue: queue, next: next)
         }
     }

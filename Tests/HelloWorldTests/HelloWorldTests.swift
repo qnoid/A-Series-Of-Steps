@@ -44,7 +44,7 @@ final class HelloWorldTests: XCTestCase {
 		        group.leave()
 		    }
 
-		let series = decode(echo)
+		let series = decode --> echo
 		series(["message":"SGVsbG8gV29ybGQh"])
 
 		let result = group.wait(timeout: .now() + 10)
@@ -71,7 +71,7 @@ final class HelloWorldTests: XCTestCase {
 		        group.leave()
 		    }
 
-		let series = decodeFirst(decondSecond((echo)))
+		let series = decodeFirst --> decondSecond --> echo
 		series(["message":"U0dWc2JHOGdWMjl5YkdRaA=="])
 		
 		let result = group.wait(timeout: .now() + 10)
